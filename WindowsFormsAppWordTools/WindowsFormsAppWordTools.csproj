@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A17776E-B307-4051-9B19-693E11A0D0B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsAppWordTools</RootNamespace>
+    <AssemblyName>WindowsFormsAppWordTools</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>WordTools.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassLexicon.cs" />
+    <Compile Include="ClassListBoxItem.cs" />
+    <Compile Include="ClassWord.cs" />
+    <Compile Include="FormAdHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdHoc.Designer.cs">
+      <DependentUpon>FormAdHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMultipleSearchCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMultipleSearchCriteria.Designer.cs">
+      <DependentUpon>FormMultipleSearchCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWordTrees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWordTrees.Designer.cs">
+      <DependentUpon>FormWordTrees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.cs" />
+    <Compile Include="MDIParentWordTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParentWordTools.Designer.cs">
+      <DependentUpon>MDIParentWordTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Morpho.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlSearchCriteria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSearchCriteria.Designer.cs">
+      <DependentUpon>UserControlSearchCriteria.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAdHoc.resx">
+      <DependentUpon>FormAdHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMultipleSearchCriteria.resx">
+      <DependentUpon>FormMultipleSearchCriteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWordTrees.resx">
+      <DependentUpon>FormWordTrees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParentWordTools.resx">
+      <DependentUpon>MDIParentWordTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlSearchCriteria.resx">
+      <DependentUpon>UserControlSearchCriteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Lexicons\parallelSevensTest.lex" />
+    <None Include="Lexicons\twl2016.lex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Lexicons\twl2016.uno">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\MultipleSearchCriteria.png" />
+    <None Include="Icons\WordTrees.png" />
+    <None Include="Icons\CreateLexicon.png" />
+    <Content Include="WordTools.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
